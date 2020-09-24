@@ -14,7 +14,6 @@ export default () => {
           location: "Belo Horizonte, Brasil",
         },
       });
-      console.log(response.data);
       setResults(response.data.businesses);
       setErrorMessage("");
     } catch (err) {
@@ -23,7 +22,7 @@ export default () => {
   };
 
   useEffect(() => {
-    searchApi("pasta");
+    searchApi("pizza");
   }, []);
 
   return [searchApi, results, errorMessage];
